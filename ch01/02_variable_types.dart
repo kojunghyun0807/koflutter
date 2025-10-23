@@ -4,30 +4,31 @@
   내용 : Dart 변수와 타입
 */
 
-//Dart 프로그램 진입점
-void main() {
-  //변수와 기본타입
+// Dart 프로그램 진입점
+void main(){
+
+  // 변수와 기본 타입
   String name = '홍길동';
   int age = 23;
   double height = 177.2;
   bool isStudent = true;
-  num score = 100; //숫자형(int, double 포함하는 상위 타입)
-  var address = '부산시'; //자동 추론 타입(컴파일 시점)
-  dynamic etc = '기타'; //자동 동적 타입(런타임 시점, 최초 한번 타입이 정해져도 변경 가능)
+  num score = 100;        // 숫자형(int, double 포함하는 상위 타입)
+  var address = '부산시';  // 자동 추론 타입(컴파일 시점, 최초 한번 타입이 정해지면 변경 불가)
+  dynamic etc = '기타';    // 자동 동적 타입(런타임 시점, 최초 한번 타입이 정해져도 변경 가능)
 
   print('이름 : ${name}\n나이: ${age}\n키: ${height}\n학생여부: ${isStudent}\n주소: ${address}');
 
-  // nullable 타입, Dart의 기본 변수는 모두 Non-Nullable, null 취급하기 위해서 타입뒤에 ? 표기
+  // Nullable 타입, Dart의 기본 변수는 모두 Non-Nullable, null 취급하기 위해서 타입뒤에 ? 표기
   String? value1 = null;
   int? value2;
 
   print('value1 : ${value1}, value2 : ${value2}');
 
-  //타입 확인
+  // 타입 확인
   print('name 타입 : ${name.runtimeType}');
   print('age 타입 : ${age.runtimeType}');
   print('height 타입 : ${height.runtimeType}');
-  print('inStudent 타입 : ${inStudent.runtimeType}');
+  print('isStudent 타입 : ${isStudent.runtimeType}');
   print('score 타입 : ${score.runtimeType}');
   print('address 타입 : ${address.runtimeType}');
   print('etc 타입 : ${etc.runtimeType}');
@@ -47,19 +48,19 @@ void main() {
   String strCount = count.toString();
   print('strCount : ${strCount}');
 
-  //상수
-  final num = 100; // 런타임 상수, 실행 시간에 결정
+  // 상수
+  final num1 = 100; // 런타임 상수, 실행 시간에 결정
   const num2 = 200; // 컴파일 타임 상수, 클래스 멤버로 사용
 
   final today = DateTime.now();
   print('today : ${today}');
 
-  //문자열
+  // 문자열
   String hello = "Hello Dart!";
   String welcome = '''
   Welcome Dart!
   Welcome World!
-  Welcome Flutter!
+  Welcome Flutter!  
   ''';
 
   print(hello);
@@ -74,8 +75,8 @@ void main() {
   String fName = '길동';
   String lName = '홍';
   String fullName = lName + fName;
-  print('이름: + fullName');
-  print('이름: $lName$fName');
+  print('이름: ' + fullName);
+  print('이름: $lName$fName'); // 문자열 보간
 
   String word = 'Flutter';
   print('문자열 길이: ${word.length}');
@@ -93,15 +94,6 @@ void main() {
   var cities = sentence.split(',');
   print('나눈 결과: $cities');
   print('다시 합치기: ${cities.join('/')}');
-
-
-
-
-
-
-
-
-
 
 
 

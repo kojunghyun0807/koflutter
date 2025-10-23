@@ -12,6 +12,6 @@ import 'dart:io';
 
 void main(){
   print('Hello World!');
-  print('Hello Dart!');
-print("Dart Version : ${Platform.version}");
+  print("Hello Dart!");
+  print("Dart Version : ${Platform.version}");
 }
