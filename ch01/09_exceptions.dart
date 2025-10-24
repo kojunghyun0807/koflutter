@@ -4,7 +4,6 @@
   내용 : Dart 예외처리
 */
 
-
 void main(){
 
   // 예외 처리 기본
@@ -64,6 +63,3 @@ void checkAge(int age){
   }
   print('나이 : $age');
 }
-
-
-
